@@ -79,7 +79,6 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">About</li>
                         </ol>
                     </nav>
@@ -338,6 +337,23 @@
             btn.textContent = "Read More";
         }
     }
+</script>
+<script>
+  document.getElementById("submitComment").addEventListener("click", function () {
+    let commentBox = document.getElementById("clientComment");
+    let commentText = commentBox.value.trim();
+
+    if (commentText) {
+      let li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent = commentText;
+
+      document.getElementById("commentsList").appendChild(li);
+      commentBox.value = ""; // clear textarea
+    } else {
+      alert("Please write a comment before submitting!");
+    }
+  });
 </script>
 </body>
 
