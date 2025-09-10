@@ -132,6 +132,14 @@
         max-height: 45px;
     }
 }
+/* Between 1024px and 1250px make "Daily Homemade Meals" behave like col-7 */
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .daily-col {
+    flex: 0 0 auto;
+    width: 38.3333%; /* same as col-7 */
+  }
+}
+
 
 @media (min-width: 992px) {
     .navbar-dark {

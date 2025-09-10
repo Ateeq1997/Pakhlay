@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
- <title>Pakhlay (SMC-Private) Limited</title>
+    <title>Pakhlay (SMC-Private) Limited</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="index.html" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Pakhlay</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -70,7 +70,7 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book an Order<a>
+                    <a href="" class="btn btn-primary py-2 px-4">Book an order</a>
                 </div>
             </nav>
 
@@ -79,7 +79,7 @@
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Booking</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
                         </ol>
@@ -90,7 +90,7 @@
         <!-- Navbar & Hero End -->
 
 
-         <!-- Reservation Start -->
+        <!-- Reservation Start -->
         <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-0">
              <div class="col-md-6">
@@ -150,7 +150,7 @@
       <option value="rice">Rice Dishes</option>
       <option value="karahi">Karahi & Salan</option>
     </select>
-    <label for="category">Select Category</label>
+    <label for="category">Categories</label>
   </div>
 </div>
 
@@ -159,12 +159,12 @@
     <select class="form-select" id="dish" required>
       <option value="">Select Dish</option>
     </select>
-    <label for="dish">Select Dish</label>
+    <label for="dish">Dishes</label>
   </div>
 </div>
 
         <!-- Writable Number of People -->
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="form-floating">
             <input type="number" class="form-control" id="people" placeholder="Number of People" required>
             <label for="people">Number of People</label>
@@ -211,8 +211,7 @@
         <!-- Reservation Start -->
         
 
-
-        <!-- Footer Start -->
+       <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
@@ -360,6 +359,25 @@ Special Request: ${message}`;
     let url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
     window.open(url, "_blank").focus();
   });
+</script>
+<script>
+  const videoModal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const previewVideo = document.getElementById('previewVideo');
+
+  // When modal is shown → play video
+  videoModal.addEventListener('shown.bs.modal', function () {
+    modalVideo.play();
+  });
+
+  // When modal is hidden → stop and reset video
+  videoModal.addEventListener('hidden.bs.modal', function () {
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  });
+
+  // Keep preview video paused
+  previewVideo.pause();
 </script>
 <script>
   document.getElementById("submitComment").addEventListener("click", function () {
