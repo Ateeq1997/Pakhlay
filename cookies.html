@@ -246,43 +246,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-  
-<script>
-  const videoModal = document.getElementById('videoModal');
-  const modalVideo = document.getElementById('modalVideo');
-  const previewVideo = document.getElementById('previewVideo');
-
-  // When modal is shown → play video
-  videoModal.addEventListener('shown.bs.modal', function () {
-    modalVideo.play();
-  });
-
-  // When modal is hidden → stop and reset video
-  videoModal.addEventListener('hidden.bs.modal', function () {
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-  });
-
-  // Keep preview video paused
-  previewVideo.pause();
-</script>
-<script>
-  document.getElementById("submitComment").addEventListener("click", function () {
-    let commentBox = document.getElementById("clientComment");
-    let commentText = commentBox.value.trim();
-
-    if (commentText) {
-      let li = document.createElement("li");
-      li.className = "list-group-item";
-      li.textContent = commentText;
-
-      document.getElementById("commentsList").appendChild(li);
-      commentBox.value = ""; // clear textarea
-    } else {
-      alert("Please write a comment before submitting!");
-    }
-  });
-</script>
+ <script type="module" src="js/reviews.js"></script>
 </body>
 
 </html>
