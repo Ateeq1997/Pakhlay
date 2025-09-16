@@ -154,7 +154,32 @@
 </div>
 
         <!-- Testimonial End -->
-        
+
+        <!-- Client Submitted Reviews Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Client Reviews</h5>
+      <h1 class="mb-4">What Our Customers Say</h1>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th style="width: 25%;">Name</th>
+            <th style="width: 55%;">Review</th>
+            <th style="width: 20%;">Date</th>
+          </tr>
+        </thead>
+        <tbody id="reviewsTable">
+          <!-- Reviews will load here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Client Submitted Reviews End -->
 
  
         <!-- Footer Start -->
@@ -249,22 +274,78 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-  document.getElementById("submitComment").addEventListener("click", function () {
+   <!-- Firebase App (always needed) -->
+<!-- Firebase + Script -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, serverTimestamp, query, orderBy } 
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  // Your Firebase Config
+  const firebaseConfig = {
+    apiKey: "AIzaSyDGcSb963EfVyYxMcU-gC5FoY8Bx79a0ww",
+    authDomain: "pakhlay-reviews.firebaseapp.com",
+    projectId: "pakhlay-reviews",
+    storageBucket: "pakhlay-reviews.firebasestorage.app",
+    messagingSenderId: "223818326820",
+    appId: "1:223818326820:web:2fea8949cb8daf550509b1",
+    measurementId: "G-VSW4FYQ3ED"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // ✅ Submit review (Name + Comment)
+  document.getElementById("submitComment").addEventListener("click", async () => {
     let commentBox = document.getElementById("clientComment");
     let commentText = commentBox.value.trim();
 
-    if (commentText) {
-      let li = document.createElement("li");
-      li.className = "list-group-item";
-      li.textContent = commentText;
+    let userName = prompt("Enter your name:", "Anonymous"); // ask for name
 
-      document.getElementById("commentsList").appendChild(li);
-      commentBox.value = ""; // clear textarea
+    if (commentText) {
+      try {
+        await addDoc(collection(db, "reviews"), {
+          name: userName || "Anonymous",
+          text: commentText,
+          createdAt: serverTimestamp()
+        });
+
+        commentBox.value = "";
+        loadReviews(); // refresh
+      } catch (e) {
+        console.error("Error adding review: ", e);
+      }
     } else {
       alert("Please write a comment before submitting!");
     }
   });
+
+  // ✅ Load reviews into the table
+  async function loadReviews() {
+    let reviewsTable = document.getElementById("reviewsTable");
+    reviewsTable.innerHTML = "";
+
+    const q = query(collection(db, "reviews"), orderBy("createdAt", "desc"));
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      let data = doc.data();
+      let date = data.createdAt?.toDate().toLocaleDateString() || "—";
+
+      let row = `
+        <tr>
+          <td><strong>${data.name}</strong></td>
+          <td>${data.text}</td>
+          <td>${date}</td>
+        </tr>
+      `;
+      reviewsTable.innerHTML += row;
+    });
+  }
+
+  // Load reviews on page load
+  window.onload = loadReviews;
 </script>
 </body>
 
