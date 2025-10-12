@@ -12,7 +12,7 @@ export function setupContactForm() {
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
 
-    let phoneNumber = "923119189778"; // ✅ WhatsApp format: 92 + number without 0
+    let phoneNumber = "923199549958"; // ✅ WhatsApp format: 92 + number without 0
     let whatsappMessage = `Hello, I am ${name}.
 Email: ${email}
 Subject: ${subject}
