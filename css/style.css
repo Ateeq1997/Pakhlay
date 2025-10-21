@@ -4,7 +4,19 @@
     --light: #F1F8FF;
     --dark: #0F172B;
 }
+@font-face {
+  font-family: "Rage Italic";
+  src: url("fonts/RageItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+.pakhlay-text {
+  font-family: "Rage Italic", cursive;
+}
 
+.pakhaly {
+  font-family: "Rage Italic", cursive;
+}
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
@@ -43,7 +55,7 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rage Italic', cursive;
     font-weight: 500;
     text-transform: uppercase;
     transition: .5s;
@@ -87,7 +99,7 @@
     margin-left: 25px;
     padding: 35px 0;
     font-size: 15px;
-    color: var(--light) !important;
+    color: black !important;
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
@@ -155,14 +167,15 @@
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: var(--dark) !important;
+        background: rgba(255, 255, 255, 0.5) !important;
+        
     }
 }
 
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(white), url(../img/bg-hero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,7 +192,7 @@
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-    color: rgba(255, 255, 255, .5);
+    color: black;
 }
 
 
@@ -431,8 +444,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
-    border: 1px solid #FFFFFF;
+    color: black;
+    border: 1px solid #FEA116;
     border-radius: 35px;
     transition: .3s;
 }
@@ -446,7 +459,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
+    color: black;
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
@@ -473,7 +486,7 @@
 }
 
 .footer .copyright a {
-    color: var(--light);
+    color: black;
 }
 
 .footer .footer-menu a {

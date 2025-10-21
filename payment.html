@@ -52,7 +52,7 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
     rel="stylesheet"
   />
-
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <!-- Icon Fonts -->
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -89,11 +89,15 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                     <a href="index.html" class="navbar-brand p-0">
-    <h1 class="text-primary m-0">
-        <img src="img/logo2.png" alt="Logo" style="margin-right:-15px;">
-        Pakhlay
-    </h1>
+                    <a href="index.html" class="navbar-brand p-0">
+  <h1 class="text-primary m-0" style="font-family: 'Great Vibes', cursive; font-size: 48px;">
+    <img
+      src="img/logo.png"
+      alt="Logo"
+      style="margin-right: -5px; vertical-align: middle;"
+    />
+    <span style="position: relative; top: 5px;">Pakhlay</span>
+  </h1>
 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -108,7 +112,7 @@
                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <!-- <a href="team.html" class="dropdown-item">Our Team</a> -->
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                           <a href="payment.html" class="dropdown-item active">Payment</a>
                             </div>
@@ -151,7 +155,7 @@
   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
     <div class="service-item rounded border p-4 text-center shadow-sm">
       <h5 class="text-danger">Premium Package</h5>
-      <p>Special “on request” dishes like Chicken Karahi, White Karahi, Chapli Kabab, Kabuli Pulao & more.</p>
+      <p>Special “on request” dishes like Chicken Karahi, White Karahi, Kabuli Pulao & more.</p>
       <h4 class="text-primary mt-3">Price: Based on Selection</h4>
       <p class="small text-muted mb-0">Ideal for custom or party orders.</p>
     </div>
@@ -189,9 +193,12 @@
     <div class="text-center mt-4 wow fadeInUp" data-wow-delay="0.7s">
       <h3 class="mb-4">Payment Methods</h3>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <button class="btn btn-primary" onclick="showPayment('Easypaisa', 'Pay easily via Easypaisa. Account Number: 0319-9549958')">Easypaisa</button>
+        <button class="btn btn-primary" onclick="showPayment('Easypaisa', 'Make your payment through Easypaisa. Account Number: 0319-9549958')">Easypaisa</button>
         <button class="btn btn-primary" onclick="showPayment('JazzCash', 'Make your payment through JazzCash. Account Number: 0319-9549958')">JazzCash</button>
-        <button class="btn btn-primary" onclick="showPayment('Bank Account', 'Transfer directly to our HBL Bank Account: 1234 5678 9012')">Bank Transfer</button>
+       <button class="btn btn-primary" onclick="showPayment('Bank Account', 'Transfer directly to our Faysal Bank Account:\n 3102 4990 0000 4944')">
+  Bank Transfer
+</button>
+
       </div>
     </div>
   </div>

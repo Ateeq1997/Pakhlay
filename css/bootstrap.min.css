@@ -45,7 +45,7 @@
 
 body {
     margin: 0;
-    font-family: "Heebo", sans-serif;
+    font-family: 'Rage Italic', cursive;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -81,7 +81,7 @@ h6,
 .h6 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Rage Italic', cursive;
     font-weight: 800;
     line-height: 1.2;
     color: #0F172B
@@ -6250,7 +6250,7 @@ fieldset:disabled .btn {
     z-index: 1080;
     display: block;
     margin: 0;
-    font-family: "Heebo", sans-serif;
+    font-family: 'Rage Italic', cursive;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6377,7 +6377,7 @@ fieldset:disabled .btn {
     z-index: 1070;
     display: block;
     max-width: 276px;
-    font-family: "Heebo", sans-serif;
+    font-family: 'Rage Italic', cursive;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -8313,7 +8313,7 @@ fieldset:disabled .btn {
 }
 
 .text-light {
-    color: #F1F8FF !important
+    color: black !important
 }
 
 .text-dark {
@@ -8321,7 +8321,7 @@ fieldset:disabled .btn {
 }
 
 .text-white {
-    color: #fff !important
+    color: black !important
 }
 
 .text-body {
@@ -8373,7 +8373,8 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-    background-color: #0F172B !important
+    background-color: rgba(255, 255, 255, 0.5) !important
+
 }
 
 .bg-body {
