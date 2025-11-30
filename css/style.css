@@ -582,3 +582,12 @@
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+/* Default icon color */
+.nav-pills .nav-link i {
+  color: #0d6efd; /* Bootstrap primary */
+}
+
+/* When tab is active */
+.nav-pills .nav-link.active i {
+  color: #000 !important;   /* White icon on active tab */
+}
