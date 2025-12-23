@@ -65,10 +65,10 @@ Each dish is prepared using **fresh, indigenous ingredients** and **authentic de
 👉 https://www.pakhlay.com/
 
 ---
-<img width="1898" height="901" alt="Screenshot 2025-12-23 183648" src="https://github.com/user-attachments/assets/d25ca0ec-5a18-46e7-8e95-3e6467bb5204" />
-<img width="1897" height="845" alt="Screenshot 2025-12-23 183610" src="https://github.com/user-attachments/assets/4e88e6f9-9ed6-4134-a336-f3f37d02ee06" />
-<img width="1900" height="915" alt="Screenshot 2025-12-23 183550" src="https://github.com/user-attachments/assets/ee531ea5-4095-4333-86ed-98e882964324" />
 <img width="1888" height="904" alt="Screenshot 2025-12-23 183505" src="https://github.com/user-attachments/assets/05cda466-7793-46e9-91d5-1d8372d410a5" />
+<img width="1900" height="915" alt="Screenshot 2025-12-23 183550" src="https://github.com/user-attachments/assets/ee531ea5-4095-4333-86ed-98e882964324" />
+<img width="1897" height="845" alt="Screenshot 2025-12-23 183610" src="https://github.com/user-attachments/assets/4e88e6f9-9ed6-4134-a336-f3f37d02ee06" />
+<img width="1898" height="901" alt="Screenshot 2025-12-23 183648" src="https://github.com/user-attachments/assets/d25ca0ec-5a18-46e7-8e95-3e6467bb5204" />
 
 ## Author
 
