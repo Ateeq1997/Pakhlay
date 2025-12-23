@@ -66,6 +66,8 @@ Each dish is prepared using **fresh, indigenous ingredients** and **authentic de
 
 ---
 
+<img width="1897" height="845" alt="Screenshot 2025-12-23 183610" src="https://github.com/user-attachments/assets/817109ae-0310-44dc-b7f0-ba06d559dbb3" />
+
 ## Author
 
 Developed by Ateeq ur Rehman  
